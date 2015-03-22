@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>PhoneGap Build Template Page</title>
-    <script type="text/javacript" charset="utf-8">
-      function onDeviceready() {
+    <title>Device Ready Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Now safe to use device APIs
         if(PushbotsPlugin.isiOS){
           PushbotsPlugin.initializeiOS("550ae6241d0ab12a7f8b4573");
         }
         if(PushbotsPlugin.isAndroid){
           PushbotsPlugin.initializeAndroid("550ae6241d0ab12a7f8b4573", "116332121444");
         }
-      }
+    }
+
     </script>
   </head>
-  <body onload="onDeviceready()">
-	
-
-    <header class="bar bar-nav">
-      <h1 class="title">Your Project Title Here</h1>
-    </header>
-
-	<p style="margin: auto; height: 50px; width: 100%; text-align: center">Loading....</p>
- 
-
+  <body onload="onLoad()">
   </body>
 </html>
