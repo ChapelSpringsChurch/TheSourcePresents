@@ -23,7 +23,7 @@
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="com.simplec.plugins.localnotification" />
-    
+    <gap:plugin name="com.pushbots.push" version="1.2.1" source="plugins.cordova.io" />
 
 
 	<icon src="icon.png" />
@@ -49,6 +49,5 @@
     <gap:splash src="res/screen/ios/Default@2x.png" gap:platform="ios" width="680" height="960" />
     <gap:splash src="res/screen/ios/Deafult-568h-2x.png" gap:platform="ios" width="640" height="1136" />
 
-    <content src="http://thesourcepresentsfinearts.com" />
     <access origin="*" subdomains="true" />
 </widget>
